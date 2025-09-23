@@ -7,8 +7,14 @@ jobs:
       - name: Build Stage
         run: echo "Building the project..."
       
+  test:
+    runs-on: ubuntu-latest
+    steps:
       - name: Test Stage
         run: echo "Running tests..."
 
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy Stage
         run: echo "Deploying the project..."
