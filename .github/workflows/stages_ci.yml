@@ -1,6 +1,8 @@
 name: Pipeline with Stages
-on: [push]
-jobs:
+on: 
+  push:
+    branches: [ main ]
+jobs:                                      #jobs name can be anything
   build:
     runs-on: ubuntu-latest
     steps:
