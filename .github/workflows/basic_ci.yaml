@@ -6,3 +6,23 @@ jobs:
     steps:
       - name: First Pipeline Step
         run: echo "Hello from CI Pipeline"
+
+      - name: Build Stage
+        run: echo "Building the project..."
+      
+      - name: Test Stage
+        run: echo "Running tests..."
+
+      - name: Deploy Stage
+        run: echo "Deploying the project..."
+
+
+#For running this pipeline, you need to have a GitHub repository and then perform the following steps:
+#1. Create a directory named .github/workflows in the root of your repository if it doesn't already exist.
+#2. Inside the workflows directory, create a new file named basic_ci.yaml.
+#3. Copy and paste the above YAML code into the basic_ci.yaml file.
+#4. git init
+#5. git add .
+#6. git commit -m "Add CI pipeline configuration"
+#7. copycode from created repository, it will comes once you craete a repository
+#8. git push -u origin main
