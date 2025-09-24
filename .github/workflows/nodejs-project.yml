@@ -1,0 +1,20 @@
+name: Nodejs CI
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@v5 #clone this repo under ubuntu-latest
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5 #setup nodejs environment under ubuntu-latest
+        with:
+          node-version: 18
+
+      - name: Install dependencies #install npm dependencies
+        run: npm install
+
+      - name: Run tests  #run tests
+        run: npm test 
+
